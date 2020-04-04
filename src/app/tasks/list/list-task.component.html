@@ -11,7 +11,7 @@
         </th>
         </tr>
         <tr *ngFor="let task of tasks">
-            <td [class.success] = "!task.finished" >{{ task.name }}</td>
+            <td [finishedTask]="task.finished" [class.success] = "!task.finished" >{{ task.name }}</td>
             <td style="width: 70px" class="text-center">
                 <input (click)="changeStatus(task)" type="checkbox" [value] = "task.id" [checked] = "task.finished" >
             </td>
